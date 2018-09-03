@@ -1,0 +1,11 @@
+listener.tcp.default = 127.0.0.1:1883
+listener.ws.default = 127.0.0.1:1884
+plugins.vmq_passwd = off
+plugins.vmq_acl = off
+plugins.vmq_diversity = on
+vmq_diversity.auth_postgres.enabled = on
+vmq_diversity.postgres.host = 127.0.0.1
+vmq_diversity.postgres.port = 5432
+vmq_diversity.postgres.user = canoe
+vmq_diversity.postgres.password = secretpassworddb
+vmq_diversity.postgres.database = canoe

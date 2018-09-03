@@ -1,0 +1,16 @@
+[Unit]
+Description=VerneMQ
+After=network.target
+
+[Service]
+WorkingDirectory=/usr/lib/vernemq
+ExecStart=/usr/sbin/vernemq start
+ExecStop=/usr/sbin/vernemq stop
+User=vernemq
+Type=forking
+Restart=always
+RestartSec=45
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

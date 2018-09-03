@@ -1,0 +1,5 @@
+check program rai_rpc with path "/home/canoed/check-rai.sh"
+  start program = "/home/canoed/start-rai.sh" with timeout 90 seconds
+  stop program = "/bin/systemctl stop rai_node"
+  if 3 restarts within 3 cycles then timeout
+  if status > 0 then restart

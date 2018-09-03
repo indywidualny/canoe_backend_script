@@ -1,0 +1,18 @@
+[Unit]
+Description=Canoed
+Documentation=https://github.com/gokr/canoed
+After=network.target httpd.service nano_node.service
+
+[Service]
+User=canoed
+WorkingDirectory=/home/canoed/canoed
+ExecStart=/home/canoed/canoed/canoed
+LimitNOFILE=65536
+KillMode=mixed
+KillSignal=SIGTERM
+Restart=always
+RestartSec=2s
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=multi-user.target

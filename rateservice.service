@@ -1,0 +1,17 @@
+[Unit]
+Description=Rateservice
+Documentation=https://github.com/getcanoe/rateservice
+After=network.target 
+
+[Service]
+User=canoed
+WorkingDirectory=/home/canoed/rateservice
+ExecStart=/home/canoed/rateservice/rateservice.js
+KillMode=mixed
+KillSignal=SIGTERM
+Restart=always
+RestartSec=2s
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=multi-user.target
